@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<form method="get">
+<!-- three more input forms to be discussed
+1. linking radio buttons
+2. drop-down menus
+3. text area inputs -->
+
+<h3>do you already own a dog?</h3>
+<label for="yes">YES:</label>
+<input id="yes" type="radio" name="dog_choice" value="yes">
+
+
+<label for="no">NO:</label>
+<input id="no" type="radio" name="dog_choice" value="no">
+<!-- in the above example, both name fields in both input tags have name='dog_choice', so when the other radio button
+is selected, the current selected radio button automatically gets deselected because both radio buttons are connected
+because of the same name field value 'dog_choice'; if suppose the name fields of both input tags had different values,
+like dog_choice and dog_choice2, then both can be selected -->
+
+
+<!-- drop down menu creation below -->
+<p>how clean is your house on a scale of 1-3?</p>
+<select name="stars">
+    <option value="Great">3</option>
+    <option value="Good">2</option>
+    <option value="Bad">1</option>
+</select>
+
+<p>any other comments?</p>
+<textarea name="name" cols="30" rows="10"></textarea>
+<input type="submit" name="" value="submit feedback">
+</form>
+<!-- after clicking the submit button, observe the url of the reloaded page
+there will be something relavant to the choices selected -->
+
+</body>
+</html>

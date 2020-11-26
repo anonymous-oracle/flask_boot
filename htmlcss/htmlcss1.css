@@ -1,0 +1,20 @@
+/* referring to the html file to be attached to, we style the tags we want
+using <tag_name>{} syntax */
+
+h1{
+    color: rgb(36, 151, 52);
+}
+
+li{
+    color: rgb(50, 70, 100);
+}
+
+p{
+    color: #2f2f3f;
+}
+
+h4{
+    /* a in rgba() stands for alpha which is a transparency metric
+    having value between 0 (full transparent) and 1 (full opaque) */
+    color: rgba(235, 26, 26, 0.9);
+}

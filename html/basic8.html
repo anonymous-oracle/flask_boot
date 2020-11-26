@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+    <!-- on the webpage, once you click the 'submit' button, observe
+    the url of the new page that loads -->
+    <!-- action field has a google url; this means that after entering the expected details and clicking the submit button
+    the page redirects to google.com -->
+<form action="https://www.google.com" method="get">
+    <!-- the label tag is used to name the input field by using an
+    id which refers to the tag we want -->
+    <label for="emailtag">EMAIL: </label>
+    <!-- name field is the value associated with the email which will be passed back -->
+    <input id="emailtag" type="email" name="useremail" placeholder="type your email address">
+    <!-- the break element is used as a new line character -->
+<br>
+    <label for="passwordtag">PASSWORD: </label>
+    <input id="passwordtag" type="password" name="password" placeholder='type your password'>
+<br>
+    <input type="submit" value="SUBMIT">
+</form>
+
+
+</body>
+</html>
