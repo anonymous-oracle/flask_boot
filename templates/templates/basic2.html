@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<ul>
+		{% for i in mylist %}
+		<li>{{i}}</li>
+		{% endfor %}
+	</ul>
+	{%if 3 in mylist%}
+	<p>found the number <strong>3</strong>!!</p>
+	{%else%}
+	<p>number not found</p>
+	{%endif%}
+</body>
+</html>
