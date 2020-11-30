@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 ####################################################
 
 class Puppy(db.Model):
-
+# this is a table object
     # manual table name choice
     __tablename__ = 'puppies'
 

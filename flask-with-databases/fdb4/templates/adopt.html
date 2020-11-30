@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>want to adopt a puppy?</h1>
+    <p>enter details below: </p>
+    <!-- no need of the action= field because we are not redirecting to anywhere -->
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <br>
+        {{form.name.label}} {{form.name}}
+        <br>
+        {{form.pup_id.label}} {{form.pup_id}}
+        <br>
+        {{form.submit()}}
+    </form>
+</div>
+{% endblock %}
