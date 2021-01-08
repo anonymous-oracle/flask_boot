@@ -76,6 +76,8 @@ def list_pup():
     puppies = Puppy.query.all()
     return render_template('list.html',puppies=puppies)
 
+
+# for routes having forms, methods should be mentioned
 @app.route('/del',methods=['GET','POST'])
 def del_pup():
     form = DelForm()
