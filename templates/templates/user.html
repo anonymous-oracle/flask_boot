@@ -1,7 +1,0 @@
-{%extends "base.html"%}
-
-{%block content%}
-<h1>this is the user page for: {{name| upper}}</h1>
-<!-- keep photos in a folder named static and videos in a folder named media -->
-<a href="{{url_for('static', filename='photo-1606225457115-9b0de873c5db.webp')}}">here</a>
-{% endblock%}
