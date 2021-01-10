@@ -21,7 +21,7 @@ class Item(Resource):
     def post(self, name):
         # to ensure that the item is not repeated
         if next(filter(lambda item: item['name'] == name, items), None):
-            return {'message':'item with name %s already exists'%(name)}, 400
+            return {'message': 'item with name %s already exists' % (name)}, 400
         data = request.get_json()
         newItem = {'name': data['name'], 'price': data['price']}
         items.append(newItem)
