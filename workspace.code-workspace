@@ -4,5 +4,24 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {},
+	"launch": {
+		"configurations": [
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "suhas:first-rest-api/app.home (python3.8)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "",
+					"lambdaHandler": "first-rest-api/app.home"
+				},
+				"lambda": {
+					"runtime": "python3.8",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			}
+		]
+	}
 }

@@ -48,3 +48,4 @@ Werkzeug
 wincertstore
 WTForms
 zipp
+Flask-RESTful
