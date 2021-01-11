@@ -49,3 +49,4 @@ wincertstore
 WTForms
 zipp
 Flask-RESTful
+Flask-JWT
