@@ -1,8 +1,10 @@
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse
 from flask_jwt import JWT, jwt_required
+from werkzeug.exceptions import TooManyRequests
 
 from security import authenticate, identity
+from user import UserRegister
 
 app = Flask(__name__)
 app.secret_key = 'secret'
@@ -25,7 +27,7 @@ class Item(Resource):
     # determines what fields of the payload are used to update the item
     parser = reqparse.RequestParser()
     parser.add_argument('price', type=float, required=True,
-                            help='This field cannot be left blank')
+                        help='This field cannot be left blank')
 
     @jwt_required()  # can put this decorator on any of the methods below and they would require authorization
     def get(self, name):
@@ -36,9 +38,9 @@ class Item(Resource):
         # to ensure that the item is not repeated
         if next(filter(lambda item: item['name'] == name, items), None):
             return {'message': 'item with name %s already exists' % (name)}, 400
-        
-        data = Item.parser.parse_args()
-        newItem = {'name': data['name'], 'price': data['price']}
+
+        data = request.get_json()
+        newItem = {'name': name, 'price': data['price']}
         items.append(newItem)
         return newItem, 201
 
@@ -66,9 +68,10 @@ class ItemList(Resource):
 
 
 # https://127.0.0.1:5000/student/<name>
-api.add_resource(Student, '/student/<name>')
+# api.add_resource(Student, '/student/<name>')
 api.add_resource(ItemList, '/items')
 api.add_resource(Item, '/item/<name>')
+api.add_resource(UserRegister, '/register')
 
 
 if __name__ == '__main__':
