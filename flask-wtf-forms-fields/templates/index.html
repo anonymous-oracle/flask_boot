@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Welcome to the Book Rack</h1>
+<form method="POST">
+    {{form.hidden_tag()}}
+    {{form.title.label}} {{form.title}}
+    <br>
+    {{form.isAMember.label}} {{form.isAMember}}
+    <br>
+    {{form.genre.label}} {{form.genre}}
+    <br>
+    {{form.promotions.label}} {{form.promotions}}
+    <p>Any other feedback? (optional)</p>
+    {{form.feedback}}
+    <br>
+    {{form.submit()}}
+</form>
+
+{% endblock %}

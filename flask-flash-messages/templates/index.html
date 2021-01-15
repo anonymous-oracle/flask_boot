@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Welcome to the Book Rack</h1>
+<!-- get_flashed_messages() is used to retrieve an object passed by the flask app after it flashes messages using the flash() function -->
+{% for msg in get_flashed_messages() %}
+
+<div role="alert" class="alert alert-warning alert-dismissible fade show">
+<button class='close fade' data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
+{{msg}}
+</div>
+{% endfor %}
+<form method="POST">
+    {{form.hidden_tag()}}
+    {{form.submit()}}
+</form>
+{% endblock %}

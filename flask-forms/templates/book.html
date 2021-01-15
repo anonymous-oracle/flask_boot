@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Book name: {{name | capitalize}}</h1>
+<img src="{{url_for('static',filename='jason-leung-D4YrzSwyIEc-unsplash.jpg')}}" height="40%" width="50%">
+{% endblock %}

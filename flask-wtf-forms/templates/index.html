@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if title %}
+<p>
+    The title style you entered is <strong>{{title}}</strong>
+<br>
+    Update it in the form below:
+</p>
+{% else %}
+<p>
+    Please enter your title:
+</p>
+{% endif %}
+
+<form method="POST" action="{{url_for('index')}}">
+    {{form.hidden_tag()}}
+    {{form.title.label}} {{form.title()}}
+    {{form.submit()}}
+</form>
+
+{% endblock %}

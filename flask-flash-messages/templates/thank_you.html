@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Thank you for signing up. Here is the information you gave us:</h1>
+    <ul>
+        <li>Title: {{session['title']}}</li>
+        <li>Membership: {{session['isAMember']}}</li>
+        <li>Genre: {{session['genre']}}</li>
+        <li>Choice of Promotion: {{session['promotions']}}</li>
+        <li>Your Valuable Feedback: {{session['feedback']}}</li>
+    </ul>
+</div>
+
+{% endblock %}
