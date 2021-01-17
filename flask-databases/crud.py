@@ -33,6 +33,13 @@ print(bookUpdate)
 db.session.commit()
 
 # DELETE
-books = Book.query.all()
+book  = Book.query.get(1)
+db.session.delete(book)
+db.session.commit()
+
+
+
+
+
 
 db.drop_all()

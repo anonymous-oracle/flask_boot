@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+<h4><strong>Please select books which are marked available from the books list</strong></h4>
+    <form method="POST" action="{{url_for('borrow_book')}}">
+        {{form.hidden_tag()}}
+        {{form.name.label}} {{form.name()}}
+        {{form.nameOfMember.label}} {{form.nameOfMember()}}
+        {{form.submit()}}
+    </form>
+</div>
+{% endblock %}

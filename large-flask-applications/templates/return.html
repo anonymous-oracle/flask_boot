@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+    <form method="POST" action="{{url_for('return_book')}}">
+        {{form.hidden_tag()}}
+        {{form.id_.label}} {{form.id_()}}
+        {{form.submit()}}
+    </form>
+</div>
+{% endblock %}
